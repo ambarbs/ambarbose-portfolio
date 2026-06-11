@@ -3,7 +3,8 @@ import { join } from "node:path";
 import Image from "next/image";
 import {
   about,
-  experience,
+  earlierGlobalExperience,
+  experienceGroups,
   hero,
   heroTechBadges,
   projects,
@@ -183,6 +184,86 @@ function AboutSection() {
   );
 }
 
+function ExperienceAccordionCard({
+  role,
+  featured,
+}: {
+  role: (typeof experienceGroups)[number]["roles"][number];
+  featured: boolean;
+}) {
+  return (
+    <details
+      className={`group rounded-lg border bg-white shadow-sm shadow-slate-200/80 ${
+        featured
+          ? "border-sky-200/80"
+          : "border-slate-200/80"
+      }`}
+    >
+      <summary className="list-none cursor-pointer rounded-lg p-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 sm:p-7 [&::-webkit-details-marker]:hidden">
+        <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-3">
+              <h3
+                className={`font-semibold text-slate-950 ${
+                  featured ? "text-2xl" : "text-xl"
+                }`}
+              >
+                {role.company}
+              </h3>
+              {featured ? (
+                <span className="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold uppercase tracking-wide text-sky-700">
+                  Featured
+                </span>
+              ) : null}
+            </div>
+            <p className="mt-2 text-lg font-semibold text-slate-700">
+              {role.role}
+            </p>
+            <p className="mt-4 text-lg leading-8 text-slate-600">
+              {role.summary}
+            </p>
+          </div>
+          <div className="shrink-0 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-left lg:text-right">
+            <p className="text-base font-bold text-sky-700">{role.period}</p>
+            <p className="mt-1 text-base text-slate-500">{role.location}</p>
+          </div>
+        </div>
+        <div className="mt-5 flex flex-wrap gap-2">
+          {role.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-700"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+        <div className="mt-5 flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-sky-700">
+          <span className="group-open:hidden">View details</span>
+          <span className="hidden group-open:inline">Hide details</span>
+          <span aria-hidden="true" className="text-base leading-none">
+            +
+          </span>
+        </div>
+      </summary>
+      <div className="border-t border-slate-200 px-6 pb-7 pt-6 sm:px-7">
+        <ul className="space-y-4 text-lg leading-8 text-slate-600">
+          {role.bullets.map((bullet) => (
+            <li key={bullet} className="flex gap-3">
+              <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-500" />
+              <span>{bullet}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-6 rounded-lg border border-slate-200 bg-slate-50 p-4 text-base leading-7 text-slate-600">
+          <span className="font-bold text-slate-900">Tech stack: </span>
+          {role.techStack}
+        </p>
+      </div>
+    </details>
+  );
+}
+
 function ExperienceSection() {
   return (
     <section
@@ -194,39 +275,50 @@ function ExperienceSection() {
         title="Production experience across enterprise and product teams."
         description="A track record of contributing to meaningful software delivery in high-expectation environments."
       />
-      <div className="mt-9 grid gap-5 xl:grid-cols-2">
-        {experience.map((role) => (
-          <Card
-            key={`${role.company}-${role.period}`}
-            className="relative overflow-hidden"
-          >
-            <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-sky-400 to-slate-300" />
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-              <div>
-                <h3 className="text-2xl font-semibold text-slate-950">
-                  {role.company}
-                </h3>
-                <p className="mt-2 text-lg font-semibold text-slate-700">
-                  {role.role}
-                </p>
-              </div>
-              <div className="shrink-0 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-left sm:text-right">
-                <p className="text-base font-bold text-sky-700">
-                  {role.period}
-                </p>
-                <p className="mt-1 text-base text-slate-500">{role.location}</p>
-              </div>
-            </div>
-            <ul className="mt-7 space-y-5 text-xl leading-9 text-slate-600">
-              {role.bullets.map((bullet) => (
-                <li key={bullet} className="flex gap-3">
-                  <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-500" />
-                  <span>{bullet}</span>
-                </li>
+      <div className="mt-9 space-y-10">
+        {experienceGroups.map((group) => (
+          <div key={group.title}>
+            <h3 className="text-xl font-bold text-slate-950 sm:text-2xl">
+              {group.title}
+            </h3>
+            <div
+              className={`mt-5 grid gap-4 ${
+                group.featured ? "xl:grid-cols-2" : "lg:grid-cols-2"
+              }`}
+            >
+              {group.roles.map((role) => (
+                <ExperienceAccordionCard
+                  key={`${role.company}-${role.period}`}
+                  role={role}
+                  featured={group.featured}
+                />
               ))}
-            </ul>
-          </Card>
+            </div>
+          </div>
         ))}
+        <Card className="border-slate-200 bg-slate-50">
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+            <div>
+              <h3 className="text-xl font-bold text-slate-950 sm:text-2xl">
+                Earlier Global Experience
+              </h3>
+              <p className="mt-3 max-w-3xl text-lg leading-8 text-slate-600">
+                Earlier software engineering roles across major global product
+                and enterprise technology teams.
+              </p>
+            </div>
+            <div className="grid gap-2 text-lg font-semibold text-slate-700 sm:grid-cols-2 lg:min-w-[520px]">
+              {earlierGlobalExperience.map((role) => (
+                <p
+                  key={role}
+                  className="rounded-lg border border-slate-200 bg-white px-4 py-3"
+                >
+                  {role}
+                </p>
+              ))}
+            </div>
+          </div>
+        </Card>
       </div>
     </section>
   );
