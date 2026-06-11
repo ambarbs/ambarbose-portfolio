@@ -233,31 +233,44 @@ export const earlierGlobalExperience = [
 
 export const projects = [
   {
-    name: 'AI Messaging Copilot',
+    name: 'ThinkRoom',
     description:
-      'Chrome extension + Node.js backend + OpenAI APIs. User-in-the-loop assistant that reads selected conversation context and generates tone-based reply suggestions.',
-    image: '/projects/ai-messaging-copilot.png',
-    tags: ['Chrome Extension', 'Node.js', 'OpenAI APIs'],
+      'Live multi-agent AI room for sharper decisions, using OpenAI, Gemini, Claude, Supabase and Vercel.',
+    status: 'Live',
+    image: '/projects/thinkroom-live.png',
+    tags: ['Multi-agent AI', 'Supabase', 'Vercel', 'Live product'],
+    ctaLabel: 'View Live App',
+    ctaUrl: 'https://thinkroom.app/live',
   },
   {
-    name: 'AI Boardroom',
+    name: 'AI Messaging Copilot',
     description:
-      'Multi-agent AI discussion app using OpenAI, Gemini, Claude, Supabase and Vercel.',
-    image: '/projects/ai-boardroom.png',
-    tags: ['Multi-agent AI', 'Supabase', 'Vercel'],
+      'Chrome extension and Node.js backend prototype for drafting tone-based replies from selected conversation context.',
+    status: 'Prototype',
+    image: '/projects/ai-messaging-copilot.png',
+    tags: ['Chrome Extension', 'Node.js', 'OpenAI APIs', 'Prototype'],
+    ctaLabel: 'Case Study',
+    ctaUrl: '',
   },
   {
     name: 'Our Life',
     description:
-      'Private shared memory and journal app using Next.js and Supabase.',
+      'Private shared memory and journal app for moments, places, notes and bucket-list planning.',
+    status: 'Private app / Demo planned',
     image: '/projects/our-life.png',
-    tags: ['Next.js', 'Supabase', 'Private App'],
+    tags: ['Next.js', 'Supabase', 'Private app', 'Demo planned'],
+    ctaLabel: 'Demo planned',
+    ctaUrl: '',
   },
   {
     name: 'RoleRadar',
-    description: 'AI-assisted job tracking and role-matching concept.',
+    description:
+      'AI-assisted job tracking and role-matching concept for managing applications, recruiters and role fit.',
+    status: 'Work in progress',
     image: '/projects/roleradar.png',
-    tags: ['AI Matching', 'Job Tracking', 'Product Concept'],
+    tags: ['AI matching', 'Job tracking', 'Product concept'],
+    ctaLabel: 'Work in progress',
+    ctaUrl: '',
   },
 ];
 
