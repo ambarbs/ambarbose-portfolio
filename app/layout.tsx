@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+const title = "Ambar Bose | Senior Software Engineer";
+const description =
+  "Sydney-based Senior Software Engineer focused on web platforms, full-stack delivery, API integration, cloud-hosted systems and AI-enabled workflows.";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -13,9 +17,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ambar Bose | Senior Software Engineer",
-  description:
-    "Recruiter-facing portfolio for Ambar Bose, a Sydney-based Senior Software Engineer building scalable web applications, internal tools, and AI-assisted products.",
+  metadataBase: new URL("https://ambarbose.com"),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "https://ambarbose.com",
+    siteName: "Ambar Bose",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Ambar Bose - Senior Software Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({

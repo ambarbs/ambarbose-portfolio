@@ -1,6 +1,6 @@
-import { existsSync } from "node:fs";
-import { join } from "node:path";
-import Image from "next/image";
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+import Image from 'next/image';
 import {
   about,
   earlierGlobalExperience,
@@ -9,18 +9,18 @@ import {
   heroTechBadges,
   projects,
   techStack,
-} from "./data/portfolio";
+} from './data/portfolio';
 
 const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Stack", href: "#tech-stack" },
-  { label: "Contact", href: "#contact" },
+  { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Stack', href: '#tech-stack' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 function publicAssetExists(path: string) {
-  return existsSync(join(process.cwd(), "public", path.replace(/^\//, "")));
+  return existsSync(join(process.cwd(), 'public', path.replace(/^\//, '')));
 }
 
 function SectionHeader({
@@ -49,7 +49,7 @@ function SectionHeader({
 
 function Card({
   children,
-  className = "",
+  className = '',
 }: Readonly<{
   children: React.ReactNode;
   className?: string;
@@ -125,6 +125,10 @@ function HeroSection() {
               GitHub
             </a>
           </div>
+          <p className="mt-5 max-w-3xl text-base font-medium leading-7 text-sky-100/85">
+            Available for senior software engineering roles across full-stack
+            delivery, platform/product engineering and AI-enabled workflows.
+          </p>
         </div>
         <div className="flex lg:justify-end">
           <div className="w-full max-w-md rounded-lg border border-white/12 bg-white/9 p-7 shadow-2xl shadow-black/25 backdrop-blur">
@@ -188,15 +192,13 @@ function ExperienceAccordionCard({
   role,
   featured,
 }: {
-  role: (typeof experienceGroups)[number]["roles"][number];
+  role: (typeof experienceGroups)[number]['roles'][number];
   featured: boolean;
 }) {
   return (
     <details
       className={`group rounded-lg border bg-white shadow-sm shadow-slate-200/70 transition-[border-color,box-shadow,transform] duration-200 motion-reduce:transition-none motion-reduce:hover:translate-y-0 ${
-        featured
-          ? "border-sky-200/80"
-          : "border-slate-200/80"
+        featured ? 'border-sky-200/80' : 'border-slate-200/80'
       } hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md hover:shadow-slate-300/50`}
     >
       <summary className="list-none cursor-pointer rounded-lg px-5 py-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 sm:px-6 sm:py-5 [&::-webkit-details-marker]:hidden">
@@ -205,7 +207,7 @@ function ExperienceAccordionCard({
             <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
               <h3
                 className={`font-semibold text-slate-950 ${
-                  featured ? "text-xl sm:text-2xl" : "text-xl"
+                  featured ? 'text-xl sm:text-2xl' : 'text-xl'
                 }`}
               >
                 {role.company}
@@ -296,7 +298,7 @@ function ExperienceSection() {
             </h3>
             <div
               className={`mt-5 grid gap-4 ${
-                group.featured ? "xl:grid-cols-2" : "lg:grid-cols-2"
+                group.featured ? 'xl:grid-cols-2' : 'lg:grid-cols-2'
               }`}
             >
               {group.roles.map((role) => (
@@ -502,14 +504,14 @@ function ContactSection() {
               Open to senior engineering conversations.
             </h2>
             <p className="mt-5 max-w-3xl text-lg leading-9 text-slate-300">
-              For roles involving frontend leadership, full-stack product
-              delivery, internal platforms, or AI-assisted tools, the fastest
-              path is LinkedIn or email.
+              For roles involving full-stack delivery, web platforms, API
+              integration, cloud-hosted systems, product engineering or
+              AI-enabled workflows, the fastest path is LinkedIn or email.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
             <a
-              href="mailto:ambar.bose@email.com"
+              href="mailto:ambar.bs@gmail.com"
               className="inline-flex h-15 items-center justify-center rounded-lg bg-white px-8 text-lg font-bold text-slate-950 hover:bg-slate-100"
             >
               Email Ambar
@@ -539,7 +541,11 @@ export default function Home() {
           </a>
           <div className="hidden items-center gap-6 text-base font-medium text-slate-300 md:flex">
             {navItems.map((item) => (
-              <a key={item.href} href={item.href} className="hover:text-sky-300">
+              <a
+                key={item.href}
+                href={item.href}
+                className="hover:text-sky-300"
+              >
                 {item.label}
               </a>
             ))}
