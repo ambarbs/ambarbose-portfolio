@@ -98,13 +98,13 @@ function HeroSection() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
               href={hero.links.cv}
-              className="inline-flex h-15 items-center justify-center rounded-lg bg-sky-400 px-8 text-lg font-bold text-slate-950 shadow-lg shadow-sky-950/30 hover:bg-sky-300"
+              className="inline-flex h-13 items-center justify-center rounded-lg bg-sky-400 px-7 text-base font-bold text-slate-950 shadow-lg shadow-sky-950/30 hover:bg-sky-300"
             >
               Download CV
             </a>
             <a
               href={hero.links.projects}
-              className="inline-flex h-15 items-center justify-center rounded-lg border border-white/15 bg-white/8 px-8 text-lg font-semibold text-white hover:border-sky-300/60 hover:bg-white/12"
+              className="inline-flex h-13 items-center justify-center rounded-lg border border-white/15 bg-white/8 px-7 text-base font-semibold text-white hover:border-sky-300/60 hover:bg-white/12"
             >
               View Projects
             </a>
@@ -112,7 +112,7 @@ function HeroSection() {
               href={hero.links.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-15 items-center justify-center rounded-lg border border-white/15 px-8 text-lg font-semibold text-slate-200 hover:border-sky-300/60 hover:bg-white/8"
+              className="inline-flex h-13 items-center justify-center rounded-lg border border-white/10 px-6 text-base font-medium text-slate-300 hover:border-white/20 hover:bg-white/6 hover:text-white"
             >
               LinkedIn
             </a>
@@ -120,7 +120,7 @@ function HeroSection() {
               href={hero.links.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-15 items-center justify-center rounded-lg border border-white/15 px-8 text-lg font-semibold text-slate-200 hover:border-sky-300/60 hover:bg-white/8"
+              className="inline-flex h-13 items-center justify-center rounded-lg border border-white/10 px-6 text-base font-medium text-slate-300 hover:border-white/20 hover:bg-white/6 hover:text-white"
             >
               GitHub
             </a>
