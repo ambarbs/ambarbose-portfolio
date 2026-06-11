@@ -37,11 +37,13 @@ function SectionHeader({
       <p className="text-xs font-bold uppercase tracking-[0.22em] text-sky-700">
         {eyebrow}
       </p>
-      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+      <h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
         {title}
       </h2>
       {description ? (
-        <p className="mt-5 text-xl leading-9 text-slate-600">{description}</p>
+        <p className="mt-4 text-lg leading-8 text-slate-600 sm:mt-5 sm:text-xl sm:leading-9">
+          {description}
+        </p>
       ) : null}
     </div>
   );
@@ -56,7 +58,7 @@ function Card({
 }>) {
   return (
     <div
-      className={`rounded-lg border border-slate-200/80 bg-white p-8 shadow-sm shadow-slate-200/80 ${className}`}
+      className={`rounded-lg border border-slate-200/80 bg-white p-5 shadow-sm shadow-slate-200/80 sm:p-8 ${className}`}
     >
       {children}
     </div>
@@ -67,44 +69,44 @@ function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-[radial-gradient(circle_at_15%_20%,rgba(14,165,233,0.22),transparent_28%),radial-gradient(circle_at_86%_18%,rgba(59,130,246,0.18),transparent_30%),linear-gradient(135deg,#020617_0%,#07111f_48%,#0f172a_100%)] text-white">
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-sky-300/50 to-transparent" />
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-6 pb-18 pt-10 sm:px-8 lg:grid lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:pb-24 lg:pt-18">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 pb-12 pt-8 sm:gap-12 sm:px-8 sm:pb-18 sm:pt-10 lg:grid lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:pb-24 lg:pt-18">
         <div className="max-w-4xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-sky-300/25 bg-white/8 px-3 py-1 text-sm font-medium text-sky-100 shadow-sm shadow-sky-950/30">
             <span className="h-2 w-2 rounded-full bg-sky-300" />
             {hero.location}
           </div>
-          <h1 className="mt-8 max-w-4xl text-6xl font-semibold tracking-tight text-white sm:text-8xl">
+          <h1 className="mt-6 max-w-4xl text-5xl font-semibold tracking-tight text-white sm:mt-8 sm:text-8xl">
             {hero.name}
           </h1>
-          <p className="mt-6 text-3xl font-medium text-sky-100 sm:text-4xl">
+          <p className="mt-4 text-2xl font-medium text-sky-100 sm:mt-6 sm:text-4xl">
             {hero.title}
           </p>
-          <p className="mt-4 text-lg font-semibold tracking-wide text-slate-300 sm:text-xl">
+          <p className="mt-3 text-base font-semibold tracking-wide text-slate-300 sm:mt-4 sm:text-xl">
             {hero.subtitle}
           </p>
-          <p className="mt-7 max-w-3xl text-xl leading-9 text-slate-300">
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300 sm:mt-7 sm:text-xl sm:leading-9">
             {hero.summary}
           </p>
           <div className="mt-7 flex flex-wrap gap-2">
             {heroTechBadges.map((badge) => (
               <span
                 key={badge}
-                className="rounded-full border border-white/12 bg-white/8 px-4 py-2 text-base font-semibold text-slate-100"
+                className="rounded-full border border-white/12 bg-white/8 px-3 py-1.5 text-sm font-semibold text-slate-100 sm:px-4 sm:py-2 sm:text-base"
               >
                 {badge}
               </span>
             ))}
           </div>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap">
             <a
               href={hero.links.cv}
-              className="inline-flex h-13 items-center justify-center rounded-lg bg-sky-400 px-7 text-base font-bold text-slate-950 shadow-lg shadow-sky-950/30 hover:bg-sky-300"
+              className="inline-flex h-12 items-center justify-center rounded-lg bg-sky-400 px-6 text-base font-bold text-slate-950 shadow-lg shadow-sky-950/30 hover:bg-sky-300 sm:h-13 sm:px-7"
             >
               Download CV
             </a>
             <a
               href={hero.links.projects}
-              className="inline-flex h-13 items-center justify-center rounded-lg border border-white/15 bg-white/8 px-7 text-base font-semibold text-white hover:border-sky-300/60 hover:bg-white/12"
+              className="inline-flex h-12 items-center justify-center rounded-lg border border-white/15 bg-white/8 px-6 text-base font-semibold text-white hover:border-sky-300/60 hover:bg-white/12 sm:h-13 sm:px-7"
             >
               View Projects
             </a>
@@ -112,7 +114,7 @@ function HeroSection() {
               href={hero.links.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-13 items-center justify-center rounded-lg border border-white/10 px-6 text-base font-medium text-slate-300 hover:border-white/20 hover:bg-white/6 hover:text-white"
+              className="inline-flex h-11 items-center justify-center rounded-lg border border-white/10 px-5 text-base font-medium text-slate-300 hover:border-white/20 hover:bg-white/6 hover:text-white sm:h-13 sm:px-6"
             >
               LinkedIn
             </a>
@@ -120,48 +122,48 @@ function HeroSection() {
               href={hero.links.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-13 items-center justify-center rounded-lg border border-white/10 px-6 text-base font-medium text-slate-300 hover:border-white/20 hover:bg-white/6 hover:text-white"
+              className="inline-flex h-11 items-center justify-center rounded-lg border border-white/10 px-5 text-base font-medium text-slate-300 hover:border-white/20 hover:bg-white/6 hover:text-white sm:h-13 sm:px-6"
             >
               GitHub
             </a>
           </div>
-          <p className="mt-5 max-w-3xl text-base font-medium leading-7 text-sky-100/85">
+          <p className="mt-4 max-w-3xl text-sm font-medium leading-6 text-sky-100/85 sm:mt-5 sm:text-base sm:leading-7">
             Available for senior software engineering roles across full-stack
             delivery, platform/product engineering and AI-enabled workflows.
           </p>
         </div>
         <div className="flex lg:justify-end">
-          <div className="w-full max-w-md rounded-lg border border-white/12 bg-white/9 p-7 shadow-2xl shadow-black/25 backdrop-blur">
-            <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+          <div className="w-full max-w-md rounded-lg border border-white/12 bg-white/9 p-5 shadow-2xl shadow-black/25 backdrop-blur sm:p-7">
+            <div className="flex flex-row items-center gap-4 sm:gap-5">
               <Image
                 src="/profile.jpg"
                 alt="Ambar Bose"
                 width={112}
                 height={112}
                 priority
-                className="h-24 w-24 rounded-full border-2 border-sky-200/70 object-cover shadow-lg shadow-black/25"
+                className="h-18 w-18 rounded-full border-2 border-sky-200/70 object-cover shadow-lg shadow-black/25 sm:h-24 sm:w-24"
               />
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-200">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200 sm:text-sm">
                   Recruiter snapshot
                 </p>
-                <p className="mt-2 text-2xl font-semibold leading-tight text-white">
+                <p className="mt-1.5 text-lg font-semibold leading-tight text-white sm:mt-2 sm:text-2xl">
                   10+ years across Australian delivery teams
                 </p>
               </div>
             </div>
-            <p className="mt-6 border-t border-white/10 pt-6 text-lg leading-9 text-slate-300">
+            <p className="mt-4 border-t border-white/10 pt-4 text-base leading-7 text-slate-300 sm:mt-6 sm:pt-6 sm:text-lg sm:leading-9">
               Enterprise web platforms, full-stack delivery, API integration,
               and AI-enabled workflows.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
-              <span className="rounded-full bg-slate-950/45 px-3.5 py-1.5 text-base font-semibold text-sky-100">
+              <span className="rounded-full bg-slate-950/45 px-3 py-1 text-sm font-semibold text-sky-100 sm:px-3.5 sm:py-1.5 sm:text-base">
                 Enterprise
               </span>
-              <span className="rounded-full bg-slate-950/45 px-3.5 py-1.5 text-base font-semibold text-sky-100">
+              <span className="rounded-full bg-slate-950/45 px-3 py-1 text-sm font-semibold text-sky-100 sm:px-3.5 sm:py-1.5 sm:text-base">
                 Platforms
               </span>
-              <span className="rounded-full bg-slate-950/45 px-3.5 py-1.5 text-base font-semibold text-sky-100">
+              <span className="rounded-full bg-slate-950/45 px-3 py-1 text-sm font-semibold text-sky-100 sm:px-3.5 sm:py-1.5 sm:text-base">
                 AI workflows
               </span>
             </div>
@@ -180,7 +182,7 @@ function AboutSection() {
           eyebrow="About"
           title="Engineering leadership with a practical product lens."
         />
-        <div className="text-xl leading-10 text-slate-600">
+        <div className="text-lg leading-8 text-slate-600 sm:text-xl sm:leading-10">
           <p>{about}</p>
         </div>
       </div>
@@ -290,28 +292,98 @@ function ExperienceSection() {
         title="Experience across enterprise web platforms, product teams and AI-enabled workflows."
         description="A track record of contributing to meaningful software delivery in high-expectation environments."
       />
-      <div className="mt-9 space-y-10">
-        {experienceGroups.map((group) => (
-          <div key={group.title}>
-            <h3 className="text-xl font-bold text-slate-950 sm:text-2xl">
-              {group.title}
-            </h3>
-            <div
-              className={`mt-5 grid gap-4 ${
-                group.featured ? 'xl:grid-cols-2' : 'lg:grid-cols-2'
-              }`}
-            >
-              {group.roles.map((role) => (
-                <ExperienceAccordionCard
-                  key={`${role.company}-${role.period}`}
-                  role={role}
-                  featured={group.featured}
-                />
-              ))}
+      <div className="mt-8 space-y-8 sm:mt-9 sm:space-y-10">
+        {experienceGroups.map((group) =>
+          group.featured ? (
+            <div key={group.title}>
+              <h3 className="text-xl font-bold text-slate-950 sm:text-2xl">
+                {group.title}
+              </h3>
+              <div className="mt-4 grid gap-4 sm:mt-5 xl:grid-cols-2">
+                {group.roles.map((role) => (
+                  <ExperienceAccordionCard
+                    key={`${role.company}-${role.period}`}
+                    role={role}
+                    featured={group.featured}
+                  />
+                ))}
+              </div>
             </div>
+          ) : (
+            <div key={group.title}>
+              <details className="group rounded-lg border border-slate-200 bg-white shadow-sm shadow-slate-200/70 lg:hidden">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-lg px-5 py-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 [&::-webkit-details-marker]:hidden">
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-950">
+                      {group.title}
+                    </h3>
+                    <p className="mt-1 text-sm leading-6 text-slate-500">
+                      {group.roles.length} additional Australian roles
+                    </p>
+                  </div>
+                  <span
+                    aria-hidden="true"
+                    className="inline-flex h-8 w-8 items-center justify-center rounded-md text-slate-500 group-open:bg-sky-50 group-open:text-sky-700"
+                  >
+                    <span className="h-2.5 w-2.5 rotate-45 border-b-2 border-r-2 border-current group-open:rotate-[225deg]" />
+                  </span>
+                </summary>
+                <div className="grid gap-4 border-t border-slate-200 p-4">
+                  {group.roles.map((role) => (
+                    <ExperienceAccordionCard
+                      key={`${role.company}-${role.period}`}
+                      role={role}
+                      featured={group.featured}
+                    />
+                  ))}
+                </div>
+              </details>
+              <div className="hidden lg:block">
+                <h3 className="text-2xl font-bold text-slate-950">
+                  {group.title}
+                </h3>
+                <div className="mt-5 grid gap-4 lg:grid-cols-2">
+                  {group.roles.map((role) => (
+                    <ExperienceAccordionCard
+                      key={`${role.company}-${role.period}`}
+                      role={role}
+                      featured={group.featured}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          ),
+        )}
+        <details className="group rounded-lg border border-slate-200 bg-slate-50 shadow-sm shadow-slate-200/70 lg:hidden">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-lg px-5 py-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 [&::-webkit-details-marker]:hidden">
+            <div>
+              <h3 className="text-lg font-bold text-slate-950">
+                Earlier Global Experience
+              </h3>
+              <p className="mt-1 text-sm leading-6 text-slate-500">
+                Earlier software engineering roles
+              </p>
+            </div>
+            <span
+              aria-hidden="true"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-md text-slate-500 group-open:bg-sky-50 group-open:text-sky-700"
+            >
+              <span className="h-2.5 w-2.5 rotate-45 border-b-2 border-r-2 border-current group-open:rotate-[225deg]" />
+            </span>
+          </summary>
+          <div className="grid gap-2 border-t border-slate-200 p-4 text-base font-semibold text-slate-700">
+            {earlierGlobalExperience.map((role) => (
+              <p
+                key={role}
+                className="rounded-lg border border-slate-200 bg-white px-4 py-3"
+              >
+                {role}
+              </p>
+            ))}
           </div>
-        ))}
-        <Card className="border-slate-200 bg-slate-50">
+        </details>
+        <Card className="hidden border-slate-200 bg-slate-50 lg:block">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
             <div>
               <h3 className="text-xl font-bold text-slate-950 sm:text-2xl">
@@ -371,7 +443,7 @@ function ProjectVisual({
               Portfolio project preview
             </p>
           </div>
-          <span className="shrink-0 rounded-full border border-sky-100 bg-sky-50 px-3 py-1 text-xs font-bold text-sky-700">
+          <span className="shrink-0 rounded-full border border-sky-100 bg-sky-50 px-2.5 py-1 text-xs font-bold text-sky-700 sm:px-3">
             {status}
           </span>
         </div>
@@ -410,14 +482,14 @@ function ProjectsSection() {
               />
               <div className="flex flex-1 flex-col p-2 pt-5">
                 <div className="flex flex-wrap items-center gap-3">
-                  <h3 className="text-2xl font-semibold text-slate-950">
+                  <h3 className="text-xl font-semibold text-slate-950 sm:text-2xl">
                     {project.name}
                   </h3>
                   <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-bold text-slate-600">
                     {project.status}
                   </span>
                 </div>
-                <p className="mt-3 text-xl leading-9 text-slate-600">
+                <p className="mt-3 text-base leading-7 text-slate-600 sm:text-xl sm:leading-9">
                   {project.description}
                 </p>
                 <div className="mt-5 flex flex-wrap gap-2">
@@ -468,14 +540,14 @@ function TechStackSection() {
       <div className="mt-9 grid gap-5 lg:grid-cols-2">
         {techStack.map((stack) => (
           <Card key={stack.group}>
-            <h3 className="text-2xl font-semibold text-slate-950">
+            <h3 className="text-xl font-semibold text-slate-950 sm:text-2xl">
               {stack.group}
             </h3>
             <div className="mt-5 flex flex-wrap gap-2">
               {stack.items.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-base font-semibold text-slate-700"
+                  className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-700 sm:px-4 sm:py-2 sm:text-base"
                 >
                   {item}
                 </span>
@@ -500,10 +572,10 @@ function ContactSection() {
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-sky-300">
               Contact
             </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-4xl">
               Open to senior engineering conversations.
             </h2>
-            <p className="mt-5 max-w-3xl text-lg leading-9 text-slate-300">
+            <p className="mt-4 max-w-3xl text-base leading-8 text-slate-300 sm:mt-5 sm:text-lg sm:leading-9">
               For roles involving full-stack delivery, web platforms, API
               integration, cloud-hosted systems, product engineering or
               AI-enabled workflows, the fastest path is LinkedIn or email.
@@ -512,7 +584,7 @@ function ContactSection() {
           <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
             <a
               href="mailto:ambar.bs@gmail.com"
-              className="inline-flex h-15 items-center justify-center rounded-lg bg-white px-8 text-lg font-bold text-slate-950 hover:bg-slate-100"
+              className="inline-flex h-12 items-center justify-center rounded-lg bg-white px-6 text-base font-bold text-slate-950 hover:bg-slate-100 sm:h-15 sm:px-8 sm:text-lg"
             >
               Email Ambar
             </a>
@@ -520,7 +592,7 @@ function ContactSection() {
               href={hero.links.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-15 items-center justify-center rounded-lg border border-white/15 px-8 text-lg font-semibold text-white hover:border-sky-300/60 hover:bg-white/8"
+              className="inline-flex h-12 items-center justify-center rounded-lg border border-white/15 px-6 text-base font-semibold text-white hover:border-sky-300/60 hover:bg-white/8 sm:h-15 sm:px-8 sm:text-lg"
             >
               LinkedIn
             </a>
@@ -535,9 +607,18 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-slate-50 text-lg text-slate-900">
       <header className="bg-slate-950 text-white">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-5 sm:px-8">
-          <a href="#" className="text-base font-semibold tracking-tight">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 sm:px-8 sm:py-5">
+          <a
+            href="#"
+            className="inline-flex h-11 items-center text-base font-semibold tracking-tight"
+          >
             Ambar Bose
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex h-10 items-center justify-center rounded-lg border border-white/10 px-4 text-sm font-semibold text-slate-200 md:hidden"
+          >
+            Contact
           </a>
           <div className="hidden items-center gap-6 text-base font-medium text-slate-300 md:flex">
             {navItems.map((item) => (
