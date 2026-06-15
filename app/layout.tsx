@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const title = "Ambar Bose | Senior Software Engineer";
+const title =
+  "Ambar Bose | Senior Software Engineer in Sydney | React, Next.js, TypeScript";
 const description =
-  "Sydney-based Senior Software Engineer focused on web platforms, full-stack delivery, API integration, cloud-hosted systems and AI-enabled workflows.";
+  "Ambar Bose is a Senior Software Engineer in Sydney specialising in React, Next.js, TypeScript, Node.js, GraphQL, AWS, Azure and CI/CD for modern web platforms.";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,11 +21,15 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ambarbose.com"),
   title,
   description,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title,
     description,
-    url: "https://ambarbose.com",
+    url: "/",
     siteName: "Ambar Bose",
+    locale: "en_AU",
     type: "website",
     images: [
       {
