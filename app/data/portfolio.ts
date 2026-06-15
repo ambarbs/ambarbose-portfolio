@@ -265,12 +265,12 @@ export const projects = [
   {
     name: 'RoleRadar',
     description:
-      'AI-assisted job tracking and role-matching concept for managing applications, recruiters and role fit.',
-    status: 'Work in progress',
+      'AI-assisted job search tracker for parsing recruiter messages, managing opportunities, tracking recruiter relationships, and surfacing role-fit insights.',
+    status: 'Live demo',
     image: '/projects/roleradar.png',
-    tags: ['AI matching', 'Job tracking', 'Product concept'],
-    ctaLabel: 'Work in progress',
-    ctaUrl: '',
+    tags: ['Next.js', 'AI parsing', 'Job tracking', 'Recruiter CRM'],
+    ctaLabel: 'View Live App',
+    ctaUrl: 'https://roleradar-vert.vercel.app/',
   },
 ];
 
