@@ -128,8 +128,8 @@ function HeroSection() {
             </a>
           </div>
           <p className="mt-4 max-w-3xl text-sm font-medium leading-6 text-sky-100/85 sm:mt-5 sm:text-base sm:leading-7">
-            Available for senior software engineering roles across full-stack
-            delivery, platform/product engineering and AI-enabled workflows.
+            Available for senior frontend and full-stack contract roles across
+            platform delivery, product engineering and AI-enabled workflows.
           </p>
         </div>
         <div className="flex lg:justify-end">

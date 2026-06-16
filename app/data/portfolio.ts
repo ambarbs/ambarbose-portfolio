@@ -1,10 +1,11 @@
 export const hero = {
   name: 'Ambar Bose',
   title: 'Senior Software Engineer',
-  subtitle: 'Web Platforms · Full-Stack Delivery · AI-Enabled Workflows',
+  subtitle:
+    'Production-grade React, Next.js and TypeScript platforms across fintech, energy, media and enterprise products.',
   location: 'Sydney, Australia',
   summary:
-    'I build scalable web platforms, internal tools, and AI-assisted workflows across React, Next.js, TypeScript, Node.js, REST/GraphQL APIs, CI/CD and cloud-hosted delivery.',
+    'Available for senior frontend and full-stack contract roles where product delivery, API integration, and engineering judgement matter.',
   links: {
     cv: '/ambar-bose-cv.pdf',
     projects: '#projects',
@@ -40,9 +41,9 @@ export const experienceGroups = [
         techStack:
           'TypeScript, React, Next.js, Node.js, REST APIs, AI-enabled workflows, cloud-hosted delivery',
         bullets: [
-          'Building healthcare web platform workflows with TypeScript, React/Next.js patterns, and pragmatic full-stack delivery.',
-          'Supporting API-backed product experiences with a focus on maintainable implementation and clear user journeys.',
-          'Applying AI-enabled workflow thinking to practical healthcare product problems.',
+          'Building healthcare web workflows that connect React/Next.js interfaces with API-backed clinical and operational product flows.',
+          'Translating product requirements into user journeys, state handling, and integration points that are clear for delivery teams to extend.',
+          'Exploring practical AI-assisted workflow patterns for healthcare tasks where context, safety, and reviewability matter.',
         ],
       },
       {
@@ -64,9 +65,9 @@ export const experienceGroups = [
         techStack:
           'React, Next.js, TypeScript, CMS/schema-driven UI, component registries, REST/GraphQL APIs, CI/CD, cloud-hosted delivery',
         bullets: [
-          'Delivered enterprise web platform features across React, Next.js, TypeScript, CMS/schema-driven UI, and reusable component patterns.',
-          'Integrated frontend journeys with REST/GraphQL APIs, CI/CD pipelines, and cloud-hosted delivery practices.',
-          'Worked across reusable UI/API patterns to keep product delivery consistent across teams and workflows.',
+          'Delivered enterprise energy platform features using React, Next.js, TypeScript, CMS-driven page models, and reusable component registries.',
+          'Connected customer and staff journeys to REST/GraphQL services, CI/CD pipelines, and cloud-hosted release processes.',
+          'Shaped shared UI and API conventions so multiple teams could deliver consistent product experiences across the platform.',
         ],
       },
       {
@@ -80,9 +81,9 @@ export const experienceGroups = [
         techStack:
           'TypeScript, React, dynamic forms, multi-step workflows, REST APIs, .NET/Azure-backed integration, CI/CD',
         bullets: [
-          'Built insurance platform experiences using modern frontend architecture, dynamic forms, and multi-step customer workflows.',
-          'Worked across reusable UI/API patterns and service integration in a regulated enterprise delivery environment.',
-          'Helped maintain clean, testable implementation patterns across complex customer journeys.',
+          'Built insurance platform experiences for dynamic forms, quote-style flows, and multi-step customer journeys.',
+          'Integrated React/TypeScript interfaces with REST services and .NET/Azure-backed systems in a regulated delivery environment.',
+          'Kept complex journeys testable by separating form state, validation behaviour, and service integration concerns.',
         ],
       },
       {
@@ -104,9 +105,9 @@ export const experienceGroups = [
         techStack:
           'React, Node.js, REST APIs, full-stack delivery, customer-facing media workflows, production release practices',
         bullets: [
-          'Contributed to media and subscription product experiences across frontend and backend delivery.',
-          'Supported high-traffic customer-facing workflows with React, Node.js, APIs, and production release practices.',
-          'Worked in a product environment where performance, release quality, and user experience were central.',
+          'Contributed to subscription and media product experiences spanning React frontends, Node.js services, and API integration.',
+          'Supported customer-facing match, account, and subscription workflows that needed reliable production release practices.',
+          'Worked with product and engineering teams where playback journeys, performance, and release quality directly affected users.',
         ],
       },
     ],
@@ -126,8 +127,8 @@ export const experienceGroups = [
         techStack:
           'React, TypeScript, JavaScript, REST APIs, customer-facing travel and booking workflows',
         bullets: [
-          'Delivered customer-facing travel product features with a focus on clean web implementation.',
-          'Worked across frontend workflows and API integration in a fast-moving product team.',
+          'Delivered customer-facing travel features across booking and discovery workflows.',
+          'Connected React/TypeScript interfaces to API-backed product data in a fast-moving travel team.',
         ],
       },
       {
@@ -142,7 +143,7 @@ export const experienceGroups = [
           'TypeScript, JavaScript, frontend engineering, API integration, product delivery',
         bullets: [
           'Contributed to specialist software delivery across frontend and integration tasks.',
-          'Helped maintain clear implementation patterns across a short, focused engagement.',
+          'Worked through a short, focused engagement by picking up existing code paths quickly and delivering targeted changes.',
         ],
       },
       {
@@ -157,7 +158,7 @@ export const experienceGroups = [
           'React, TypeScript, JavaScript, REST APIs, enterprise integration, insurance workflows',
         bullets: [
           'Delivered web application features in an enterprise insurance and financial services setting.',
-          'Worked across frontend implementation and service integration with attention to maintainability.',
+          'Worked across React/TypeScript screens, service integration, and release constraints common to regulated product teams.',
         ],
       },
       {
@@ -172,7 +173,7 @@ export const experienceGroups = [
           'React, JavaScript, Node.js, REST APIs, full-stack web delivery, data-backed product workflows',
         bullets: [
           'Built full-stack web features for data-backed product experiences.',
-          'Worked across frontend implementation, backend integration, and production delivery.',
+          'Worked across React interfaces, Node.js integration points, and production delivery for property-data workflows.',
         ],
       },
       {
@@ -186,7 +187,7 @@ export const experienceGroups = [
         techStack:
           'JavaScript, frontend engineering, REST APIs, production systems, financial services delivery',
         bullets: [
-          'Delivered product features in a fast-moving financial services environment with a focus on quality and maintainability.',
+          'Delivered product features in a fast-moving financial services environment where reliability and release discipline mattered.',
           'Worked across frontend implementation, API integration, and team delivery practices for production systems.',
         ],
       },
@@ -202,7 +203,7 @@ export const experienceGroups = [
           'Enterprise web delivery, service integration, REST APIs, reusable implementation patterns, telecom workflows',
         bullets: [
           'Contributed to enterprise telecom solution delivery across integration and web application work.',
-          'Supported reusable implementation patterns for complex business workflows.',
+          'Supported shared implementation approaches for complex telecom workflows that crossed multiple business systems.',
         ],
       },
       {
@@ -217,7 +218,7 @@ export const experienceGroups = [
           'JavaScript, full-stack web development, APIs, backend integration, financial services software',
         bullets: [
           'Built full-stack financial services software across web interfaces, APIs, and backend integration work.',
-          'Contributed to reusable engineering patterns and production delivery across established product teams.',
+          'Contributed to established product teams delivering financial services workflows into production environments.',
         ],
       },
     ],
@@ -225,50 +226,40 @@ export const experienceGroups = [
 ];
 
 export const earlierGlobalExperience = [
-  'Oracle — Senior Application Developer',
-  'Cisco Systems — Software Engineer II',
-  'Yodlee — Software Engineer',
-  'Indience Info Systems / Unvired — Senior Software Engineer',
+  'Oracle - Senior Application Developer',
+  'Cisco Systems - Software Engineer II',
+  'Yodlee - Software Engineer',
+  'Indience Info Systems / Unvired - Senior Software Engineer',
 ];
 
 export const projects = [
   {
     name: 'ThinkRoom',
     description:
-      'Live multi-agent AI room for sharper decisions, using OpenAI, Gemini, Claude, Supabase and Vercel.',
+      'Decision-support workspace that turns a prompt into a live multi-agent boardroom. I built the Next.js product surface, agent orchestration, Supabase-backed session flow, and Vercel deployment around OpenAI, Gemini and Claude, showing senior full-stack delivery across AI UX, stateful workflows, and production hosting.',
     status: 'Live',
     image: '/projects/thinkroom-live.png',
-    tags: ['Multi-agent AI', 'Supabase', 'Vercel', 'Live product'],
+    tags: ['Next.js', 'Multi-agent AI', 'Supabase', 'Vercel'],
     ctaLabel: 'View Live App',
     ctaUrl: 'https://thinkroom.app/live',
   },
   {
-    name: 'AI Messaging Copilot',
+    name: 'WhatsApp Copilot',
     description:
-      'Chrome extension and Node.js backend prototype for drafting tone-based replies from selected conversation context.',
+      'Messaging assistant for turning selected WhatsApp conversation context into tone-aware draft replies. I built the Chrome extension workflow, Node.js API layer, and OpenAI integration, demonstrating product judgement around browser UX, privacy-conscious context selection, and practical AI features for everyday workflows.',
     status: 'Prototype',
     image: '/projects/ai-messaging-copilot.png',
-    tags: ['Chrome Extension', 'Node.js', 'OpenAI APIs', 'Prototype'],
+    tags: ['Chrome Extension', 'Node.js', 'OpenAI APIs', 'AI UX'],
     ctaLabel: 'Case Study',
-    ctaUrl: '',
-  },
-  {
-    name: 'Our Life',
-    description:
-      'Private shared memory and journal app for moments, places, notes and bucket-list planning.',
-    status: 'Private app / Demo planned',
-    image: '/projects/our-life.png',
-    tags: ['Next.js', 'Supabase', 'Private app', 'Demo planned'],
-    ctaLabel: 'Demo planned',
     ctaUrl: '',
   },
   {
     name: 'RoleRadar',
     description:
-      'AI-assisted job search tracker for parsing recruiter messages, managing opportunities, tracking recruiter relationships, and surfacing role-fit insights.',
+      'Job-search operating system for managing recruiter messages, opportunities, relationships, and role-fit signals in one place. I built the Next.js app with AI-assisted parsing and structured tracking flows, making it relevant to senior frontend/full-stack roles through workflow design, data modelling, and polished product execution.',
     status: 'Live demo',
     image: '/projects/roleradar.png',
-    tags: ['Next.js', 'AI parsing', 'Job tracking', 'Recruiter CRM'],
+    tags: ['Next.js', 'AI parsing', 'Product workflows', 'Recruiter CRM'],
     ctaLabel: 'View Live App',
     ctaUrl: 'https://roleradar-vert.vercel.app/',
   },
